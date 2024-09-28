@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Website</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background: linear-gradient(to top right, rgb(8, 8, 8), rgb(93, 142, 248));
+            font-family: Arial, sans-serif;
+        }
+
+        .outer-container{
+            width: 90%;
+            margin: 24px auto;
+        }
+
+        .head-section{   
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            margin-top: 29px;
+            box-shadow: 2px 4px 5px black;
+        }
+
+        .item1{
+            border: 2px solid black;
+            height: 100%;
+            box-shadow: 2px 4px 5px black;
+        }
+
+        .box1{
+            padding: 20px;
+        }
+
+        .box2{
+            height: auto;
+        }
+
+        .course-cards, .online-section{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .single-card, .online-card{
+            border: 2px solid black;
+            background-color: rgba(123, 121, 121, 0.29);
+            box-shadow: 2px 4px 5px black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .single-card-img1, .online-card-img1{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .para{
+            text-align: center;
+            color: white;
+            margin: 20px 0;
+            font-size: 1.5rem;
+        }
+
+        .btn, .btn1{
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .inside-btn1, .online-btn{
+            padding: 10px;
+            background-color: rgb(190, 221, 249);
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .inside-btn1:hover, .online-btn:hover{
+            background-color: antiquewhite;
+            box-shadow: 1px 1px 2px white;
+        }
+
+        .online-btn{
+            background-color: rgb(124, 124, 223);
+            color: white;
+        }
+        .online-btn:hover{
+            color: black;
+        }
+        .online-para, .online-para1{
+            color: white;
+            text-align: center;
+        }
+
+        .heading{
+            text-align: center;
+            color: white;
+        }
+
+        .head-para{
+            text-align: justify;
+            color: azure;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 1024px) {
+            .head-section{
+                grid-template-columns: 1fr;
+            }
+            .box2, .head-section-img{
+                width: 100%;
+                height: auto;
+            }
+            .course-cards, .online-section{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .head-section{
+                grid-template-columns: 1fr;
+            }
+            .box1{
+                padding: 10px;
+            }
+            .course-cards, .online-section{
+                grid-template-columns: 1fr;
+            }
+            .btn, .btn1{
+                flex-direction: column;
+            }
+            .para{
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .head-para{
+                font-size: 0.9rem;
+            }
+            .single-card-img1, .online-card-img1{
+                height: 150px;
+            }
+            .inside-btn1, .online-btn{
+                padding: 8px;
+                font-size: 0.8rem;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="outer-container">
+
+        <div class="head-section">
+            <div class="item box1">
+                <h1 class="heading">Your Courses</h1>
+                <p class="head-para">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+            <div class="item1 box2">
+                <img src="/Photos/head section image.jpeg" alt="Course Image" class="head-section-img">
+            </div>
+        </div>
+
+        <h1 class="para">Our Popular Courses</h1>
+
+        <div class="course-cards">
+            <div class="single-card">
+                <img src="/Photos/java.jpeg" alt="Java Course" class="single-card-img1">
+                <div class="btn">
+                    <button class="inside-btn1">Enroll Now</button>
+                    <button class="inside-btn1">View Course</button>
+                </div>
+            </div>
+            <div class="single-card">
+                <img src="/Photos/javascript.png" alt="JavaScript Course" class="single-card-img1">
+                <div class="btn">
+                    <button class="inside-btn1">Enroll Now</button>
+                    <button class="inside-btn1">View Course</button>
+                </div>
+            </div>
+            <div class="single-card">
+                <img src="/Photos/c.png" alt="" class="single-card-img1">
+                <div class="btn">
+                <button class="inside-btn1">Enroll Now</button>
+                <button class="inside-btn1">View Course</button>
+            </div>
+            </div>
+            <div class="single-card">
+                <img src="/Photos/c++.jpeg" alt="" class="single-card-img1">
+                <div class="btn">
+                <button class="inside-btn1">Enroll Now</button>
+                <button class="inside-btn1">View Course</button>
+            </div>
+            </div>
+            <div class="single-card">
+                <img src="/Photos/golang.png" alt="" class="single-card-img1">
+                <div class="btn">
+                <button class="inside-btn1">Enroll Now</button>
+                <button class="inside-btn1">View Course</button>
+            </div>
+            </div>
+            <div class="single-card">
+                <img src="/Photos/php.jpeg" alt="" class="single-card-img1">
+                <div class="btn">
+                <button class="inside-btn1">Enroll Now</button>
+                <button class="inside-btn1">View Course</button>
+            </div>
+            </div>
+            <div class="single-card">
+                <img src="/Photos/python.png" alt="" class="single-card-img1">
+                <div class="btn">
+                <button class="inside-btn1">Enroll Now</button>
+                <button class="inside-btn1">View Course</button>
+            </div>
+            </div>
+            <div class="single-card">
+                <img src="/Photos/ruby.jpeg" alt="" class="single-card-img1">
+                <div class="btn">
+                <button class="inside-btn1">Enroll Now</button>
+                <button class="inside-btn1">View Course</button>
+            </div>
+            </div>
+        </div>
+
+        <h1 class="para">Find Online Courses</h1>
+
+        <section class="online-section">
+            <div class="online-card">
+                <img src="/Photos/web development.jpeg" alt="Web Development" class="online-card-img1">
+                <p class="online-para">Web Development</p>
+                <p class="online-para1">Lorem ipsum dolor sit amet...</p>
+                <div class="btn1">
+                    <button class="online-btn">Enroll Now</button>
+                    <button class="online-btn">View Course</button>
+                </div>
+            </div>
+            <div class="online-card">
+                <img src="/Photos/artificial intelligence.jpeg" alt="AI" class="online-card-img1">
+                <p class="online-para">Artificial Intelligence</p>
+                <p class="online-para1">Lorem ipsum dolor sit amet...</p>
+                <div class="btn1">
+                    <button class="online-btn">Enroll Now</button>
+                    <button class="online-btn">View Course</button>
+                </div>
+            </div>
+            <div class="online-card">
+                <img src="/Photos/data science.jpeg" alt="" class="online-card-img1">
+                <p class="online-para">Data Science</p>
+                <p class="online-para1">Lorem ipsum dolor sit amet consectetur </p>
+                <div class="btn1">
+                    <button class="online-btn">Enroll Now</button>
+                    <button class="online-btn">View Course</button>
+                </div>
+            </div>
+            <div class="online-card">
+                <img src="/Photos/cloud computing.jpeg" alt="" class="online-card-img1">
+                <p class="online-para">Cloud Computing</p>
+                <p class="online-para1">Lorem ipsum dolor sit amet consectetur </p>
+                <div class="btn1">
+                    <button class="online-btn">Enroll Now</button>
+                    <button class="online-btn">View Course</button>
+                </div>
+            </div>
+            <div class="online-card">
+                <img src="/Photos/data strucuture.jpeg" alt="" class="online-card-img1">
+                <p class="online-para">Data Structure and Algorithm</p>
+                <p class="online-para1">Lorem ipsum dolor sit amet consectetur </p>
+                <div class="btn1">
+                    <button class="online-btn">Enroll Now</button>
+                    <button class="online-btn">View Course</button>
+                </div>
+            </div>
+            <div class="online-card">
+                <img src="/Photos/cyber security.jpeg" alt="" class="online-card-img1">
+                <p class="online-para">Cyber Security</p>
+                <p class="online-para1">Lorem ipsum dolor sit amet consectetur </p>
+                <div class="btn1">
+                    <button class="online-btn">Enroll Now</button>
+                    <button class="online-btn">View Course</button>
+                </div>
+            </div>
+            <div class="online-card">
+                <img src="/Photos/machine learning.jpeg" alt="" class="online-card-img1">
+                <p class="online-para">Machine Learning</p>
+                <p class="online-para1">Lorem ipsum dolor sit amet consectetur </p>
+                <div class="btn1">
+                    <button class="online-btn">Enroll Now</button>
+                    <button class="online-btn">View Course</button>
+                </div>
+            </div>
+            <div class="online-card">
+                <img src="/Photos/software engineering.jpeg" alt="" class="online-card-img1">
+                <p class="online-para">Software Engneering</p>
+                <p class="online-para1">Lorem ipsum dolor sit amet consectetur </p>
+                <div class="btn1">
+                    <button class="online-btn">Enroll Now</button>
+                    <button class="online-btn">View Course</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
